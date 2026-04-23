@@ -1,0 +1,45 @@
+{
+  "effortLevel": "high",
+  "model": "claude-sonnet-4-6",
+  "env": {
+    "CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING": "1",
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+    "CLAUDE_CODE_DISABLE_1M_CONTEXT": "1",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "claude-sonnet-4-6"
+  },
+  "permissions": {
+    "allow": [
+      "Write(./Pets/*.md)",
+      "Edit(./Pets/*.memory.md)",
+      "Bash(touch Pets/.skill_spoke_active)",
+      "Bash(touch Pets/.skill_spoke_called)",
+      "Write(./Pets/.called)",
+      "Write(./Pets/.called-comment)",
+      "Write(./Pets/.comment)",
+      "Write(./Pets/.alien-pose)",
+      "Write(./Pets/.alien-session)"
+    ]
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c '$(git rev-parse --show-toplevel)/.claude/hooks/pet-name-react.sh'"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c '$(git rev-parse --show-toplevel)/.claude/hooks/pet-comment.sh'"
+          }
+        ]
+      }
+    ]
+  }
+}

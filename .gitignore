@@ -1,0 +1,29 @@
+# Machine-specific settings
+.claude/settings.local.json
+
+# Pet runtime state (ephemeral, regenerated each session)
+Pets/.active
+Pets/.called
+Pets/.comment
+Pets/.called-comment
+Pets/.called-comment
+Pets/.last_reaction*
+Pets/.last_comment*
+Pets/.prompt_count
+Pets/.skill_spoke_active
+Pets/.skill_spoke_called
+Pets/.alien-pose
+Pets/.alien-session
+Pets/.heckle_count.*
+
+# Live pet instances (yours, not for sharing)
+Pets/*.md
+Pets/*.memory.md
+!Pets/inventory.md
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
