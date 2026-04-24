@@ -26,7 +26,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash -c '$(git rev-parse --show-toplevel)/.claude/hooks/pet-name-react.sh'"
+            "command": "bash .claude/hooks/pet-name-react.sh"
           }
         ]
       }
@@ -36,7 +36,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash -c '$(git rev-parse --show-toplevel)/.claude/hooks/pet-comment.sh'"
+            "command": "bash .claude/hooks/pet-comment.sh"
           }
         ]
       }

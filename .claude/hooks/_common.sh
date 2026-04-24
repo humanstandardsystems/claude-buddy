@@ -5,7 +5,7 @@
 #   17 — never truncate comment length
 #   19 — never clear .active
 
-REPO_ROOT="$(git -C "$(dirname "${BASH_SOURCE[0]}")" rev-parse --show-toplevel 2>/dev/null)"
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 PETS_DIR="$REPO_ROOT/Pets"
 ACTIVE_FILE="$PETS_DIR/.active"
 CALLED_FILE="$PETS_DIR/.called"
