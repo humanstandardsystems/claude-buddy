@@ -22,16 +22,21 @@ Pets gain XP every turn, level up through four stages (baby → adolescent → a
 
 ## Setup
 
-### 1. Clone into your project
+### 1. Clone the repo and run the installer
 
 ```bash
 git clone https://github.com/humanstandardsystems/claude-buddy.git
 cd your-project
-cp -r /path/to/claude-buddy/.claude .
-cp -r /path/to/claude-buddy/Pets .
+bash /path/to/claude-buddy/install.sh
 ```
 
-Or clone directly as your project root if you want a standalone buddy environment.
+That's it. The installer copies all hooks, commands, and scripts into your project and wires up `settings.json` automatically. Works in any project — git repo or not.
+
+To install into a specific directory:
+
+```bash
+bash /path/to/claude-buddy/install.sh /path/to/your-project
+```
 
 ### 2. Set your name (optional)
 
@@ -43,17 +48,7 @@ export PET_USER_NAME="YourName"
 
 Add it to your shell profile (`~/.zshrc` or `~/.bashrc`) to persist.
 
-### 3. Wire up the statusline (optional but recommended)
-
-Add to your terminal profile or shell startup:
-
-```bash
-python3 /path/to/your/project/.claude/statusline-pet.py
-```
-
-The statusline renders your active pet in the bottom panel of the terminal. Without it, the system still works — you just won't see the live pet display.
-
-### 4. Start Claude Code and summon a pet
+### 3. Restart Claude Code and summon a pet
 
 ```bash
 claude
