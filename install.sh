@@ -64,7 +64,7 @@ BUDDY_SETTINGS=$(cat <<JSON
         "hooks": [
           {
             "type": "command",
-            "command": "bash .claude/hooks/pet-name-react.sh"
+            "command": "bash $TARGET/.claude/hooks/pet-name-react.sh"
           }
         ]
       }
@@ -74,7 +74,7 @@ BUDDY_SETTINGS=$(cat <<JSON
         "hooks": [
           {
             "type": "command",
-            "command": "bash .claude/hooks/pet-comment.sh"
+            "command": "bash $TARGET/.claude/hooks/pet-comment.sh"
           }
         ]
       }
