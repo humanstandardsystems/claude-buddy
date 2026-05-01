@@ -1,0 +1,6 @@
+{
+  "name": "pets",
+  "version": "0.1.0",
+  "description": "Persistent animal companion for Claude Code — pets live in the statusline, gain XP, evolve, and heckle you as you work.",
+  "priority": 50
+}
